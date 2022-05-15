@@ -1,0 +1,23 @@
+﻿@model imdb.Models.movie
+
+@{
+    ViewBag.Title = "oneMovie";
+}
+
+<br />
+<br />
+
+<img src="@Model.photo" height="220px" />
+<h3>@Model.name</h3>
+
+<br />
+<br />
+<h1>_________________________________________________</h1>
+@{foreach(var item in Model.Act_In_Movs)
+  {
+        <a href="profile/oneActor/@item.actor.id" >
+        <img src="@item.actor.photo" height="120px" />
+        </a>
+        <h4>@item.actor.name</h4>
+  } 
+}

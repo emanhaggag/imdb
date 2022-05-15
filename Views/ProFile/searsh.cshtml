@@ -1,0 +1,19 @@
+﻿@model IList<imdb.Models.movie>
+
+@{
+    ViewBag.Title = "searsh";
+}
+
+
+
+
+@{foreach (var item in Model)
+    {
+
+        <img src="@item.photo" height="150px" />
+        <h4>@item.name</h4>
+    }
+}
+
+
+

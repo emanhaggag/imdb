@@ -1,0 +1,16 @@
+﻿@model imdb.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<img src="@Model.Photo" height="170px" />
+<h3>@Model.FristName @Model.lastName</h3>
+
+@{     
+    foreach ( var item in Model.Fav_Acts)
+    {
+        <img src="@item.Actor.photo"  height="100px"/>
+        <h5>@item.Actor.name</h5>
+    }
+}

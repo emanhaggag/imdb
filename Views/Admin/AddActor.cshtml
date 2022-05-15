@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "AddActor";
+}
+
+<form action="/Admin/AddActor" method="post" enctype = "multipart/form-data">
+    <label>Name</label><input type="text" name="name" />
+    <br />
+    <label>photo</label><input type="file" name="photo" />
+    <br />
+    <input type="submit" value="send"/>
+</form>

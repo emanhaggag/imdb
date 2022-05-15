@@ -1,0 +1,15 @@
+﻿@model IList<imdb.Models.actor>
+
+@{
+    ViewBag.Title = "AllActor";
+}
+
+@{foreach (var item in Model)
+  {
+        <a href="/profile/oneActor/@item.id" >
+        <img src="@item.photo" height="150px" />
+        <h4>@item.name</h4>
+        </a>
+  } 
+  }
+
